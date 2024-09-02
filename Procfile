@@ -1,1 +1,1 @@
-web: gunicorn eco-nomad.wsgi
+web: gunicorn eco_nomad.wsgi
