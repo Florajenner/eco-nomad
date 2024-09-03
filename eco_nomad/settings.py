@@ -31,6 +31,7 @@ DEBUG = True
 
 
 ALLOWED_HOSTS = ['8000-florajenner-economad-61z59698c1a.ws-eu115.gitpod.io',
+'8000-florajenner-economad-5e0sn92hg65.ws.codeinstitute-ide.net',
 '.herokuapp.com']
 
 
