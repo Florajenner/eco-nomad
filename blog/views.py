@@ -5,4 +5,5 @@ from .models import Post
 # Create your views here.
 class PostList(generic.ListView):
     model = Post
-
+    template_name = 'blog/post_list.html'  # Explicitly specify the template
+    context_object_name = 'object_list'  # Explicitly specif
