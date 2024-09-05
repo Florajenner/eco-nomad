@@ -10,11 +10,11 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-4">
+                <div class="col-md-4 d-flex align-items-stretch">
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
-                            <div class="image-container mb-3">
-                                <img src="{% static 'images/campervan.jpg' %}" class="img-fluid" style="max-width: 600px;" alt="Campervan on the road">
+                            <div class="image-container mb-3" style="max-height: 300px; overflow: hidden;">
+                                <img src="{% static 'images/campervan.jpg' %}" class="img-fluid w-100" alt="Campervan on the road">
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
