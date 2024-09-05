@@ -1,7 +1,7 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-
 <!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
@@ -14,7 +14,7 @@
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
                             <div class="image-container mb-3">
-                                <img src="{% static 'images/campervan.jpg' %}" class="img-fluid scale" alt="Campervan on the road">
+                                <img src="{% static 'images/campervan.jpg' %}" class="img-fluid" style="max-width: 600px;" alt="Campervan on the road">
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
@@ -55,6 +55,5 @@
     </nav>
     {% endif %}
 </div>
-
 <!-- index.html content ends here -->
 {% endblock %}
