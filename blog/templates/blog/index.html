@@ -14,7 +14,12 @@
                     <div class="card mb-4 shadow-sm">
                         <div class="card-body">
                             <div class="image-container mb-3" style="max-height: 300px; overflow: hidden;">
-                                <img src="{% static 'images/campervan.jpg' %}" class="img-fluid w-100" alt="Campervan on the road">
+                                <!-- Check if post has a featured image -->
+                                {% if post.featured_image %}
+                                    <img src="{{ post.featured_image.url }}" class="img-fluid w-100" alt="{{ post.title }}">
+                                {% else %}
+                                    <img src="{% static 'images/campervan.jpg' %}" class="img-fluid w-100" alt="Campervan on the road">
+                                {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
