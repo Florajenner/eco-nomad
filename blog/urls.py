@@ -11,5 +11,6 @@ urlpatterns = [
     path('like/<slug:slug>/', views.post_like, name='post_like'),  # Like functionality
 ]
 
+# Use the += operator correctly to append static URLs to the existing urlpatterns
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
