@@ -1,131 +1,176 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Eco-Nomad Blog
 
-Welcome FLORA JENNER,
+## About The Eco-Nomad Blog
+Eco-Nomad is a platform aimed at promoting sustainable travel. The blog shares engaging posts on topics such as alternatives to flying, how to reduce your plastic use when not at home, and other tips that help eco-conscious travellers maintain their green standards on the move.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Screenshots
+![Screenshot of Mockup](/assets/media/mockup.jpg)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## User Stories
+- As a user, I can upload videos to my blog posts so that I can share dynamic content.
+- As a user, I can like a blog post so that I can show my appreciation for the content.
+- As an admin, I can delete inappropriate comments so that I can maintain the quality of discussions.
+- As a user, I can delete my blog post so that I can remove content I no longer want to share.
 
-## Gitpod Reminders
+## Design
+The straightforward design and generous use of white space improve the site's readability and user experience. The choice of colours and visuals is in harmony with the brand's environmentally conscious values, creating a sense of eco-friendliness.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Colour Scheme
+Eco-Nomad uses a palette that reflects the natural world, featuring green tones evoking a feel of eco-friendliness. The gentle, muted colours help maintain focus on the content without overwhelming the reader.
 
-`python3 -m http.server`
+![Screenshot of Colour Scheme](/assets/media/colour_scheme.jpg)
 
-A blue button should appear to click: _Make Public_,
+### Typography
+Headings and subheadings use a modern sans-serif font that complements the site's minimal design, while paragraphs use a serif font for readability.
 
-Another blue button should appear to click: _Open Browser_.
+## Features
+- **Fully Responsive Design**: The blog is designed to be responsive to a variety of devices, such as mobile phones, tablets, laptops, and desktop computers.
+- **Comment Section**: Readers can engage with the content by leaving comments.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+![Screenshot of Comment Section](/assets/media/comment_section.jpg)
 
-A blue button should appear to click: _Make Public_,
+- **Post Like**: Readers can quickly like posts without having to write a comment, providing feedback to the writer.
 
-Another blue button should appear to click: _Open Browser_.
+![Screenshot of Like Feature](/assets/media/like.jpg)
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- **Delete Comment**: Readers can delete their comments after submission.
+- **Update Comment**: Comments can be updated after submission.
 
-To log into the Heroku toolbelt CLI:
+![Screenshot of Update and Delete Comment Features](/assets/media/update_and_delete_comment.jpg)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- **Comment Approval**: Comments are shown once they are approved, giving admins full control.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+## Future Features
+- **User Engagement**: We aim to introduce social media integration, allowing readers to engage with content and share it easily with others.
+- **Content Organization**: Posts categorized to help users easily explore different topics related to sustainability and eco-friendly living.
+- **Search Functionality**: Users can quickly search for specific posts or keywords, enhancing accessibility.
 
-### Connecting your Mongo database
+## Technologies Used
+- **Django (4.2.16)**: A high-level Python web framework that promotes rapid development and clean, pragmatic design. It is used as the core framework for the Eco-Nomad blog.
+- **PostgreSQL**: A powerful, open-source object-relational database system that is used as the database for this project.
+- **Gunicorn (23.0.0)**: A Python WSGI HTTP server used to run the application in production.
+- **Whitenoise (5.3.0)**: Allows the serving of static files directly from Django without needing a separate web server.
+- **Heroku**: A cloud platform used for deploying the Eco-Nomad blog.
+- **Git & GitHub**: For version control and repository hosting, enabling collaborative development.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+## Libraries
+- **Crispy Forms (2.3)**: A Django application that provides elegant form rendering.
+- **Crispy Bootstrap 5 (0.7)**: Adds Bootstrap 5 support for Django Crispy Forms.
+- **Django Allauth (0.57.2)**: A package that provides authentication, registration, and third-party (social) account authentication.
+- **Django Summernote (0.8.20.0)**: A WYSIWYG editor for text fields in Django, used to enhance content management.
+- **Python JWT (2.9.0)**: Handles JSON Web Tokens (JWT) for secure token-based authentication.
+- **OAuthlib (3.2.2)** & **Requests OAuthlib (2.0.0)**: These libraries provide support for OAuth 1.0 and OAuth 2.0, enabling secure third-party authentication.
+- **PyOpenID (3.2.0)**: An implementation of the OpenID standard used for authentication purposes.
+- **SQLparse (0.5.1)**: A non-validating SQL parser for Python, used by Django to handle SQL queries.
+- **Dj-database-url (0.5.0)**: A utility that simplifies database configurations, particularly useful for deployment on platforms like Heroku.
 
-------
+## Validator Testing
+![Screenshot of HTML Validator](/assets/media/html_validator.jpg)
 
-## Release History
+![Screenshot of CSS Validator](/assets/media/css_validator.jpg)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![Screenshot of Python Validator](/assets/media/python_validator.jpg)
 
-**June 18, 2024,** Add Mongo back into template
+![Lighthouse](/assets/media/lighthouse.jpg)
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+### Deployment Tools
+- **Heroku**: The platform used to deploy the Eco-Nomad blog.
+- **Git** & **GitHub**: Used for version control and collaborative development.
 
-**May 28 2024:** Fix Mongo and Links installs
+## Deployment
+Here’s the deployment instructions with the code sections in plain text:
 
-**April 26 2024:** Update node version to 16
+### **Deployment Instructions for Heroku**
 
-**September 20 2023:** Update Python version to 3.9.17.
+#### **Pre-requisites:**
+- Ensure you have a GitHub account and Heroku account.
+- Install Git, Heroku CLI, and Python on your local machine.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+#### **Deploying on Heroku**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+1. **Clone the GitHub Repository:**
+   - Open your terminal and clone the repository:
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+   `git clone <GitHub-repository-URL>`
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+   `cd <project-folder>`
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+2. **Set Up the Virtual Environment:**
+   - Create and activate a virtual environment:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+   `python3 -m venv venv`
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+   `source venv/bin/activate` (On Windows, use `venv\Scripts\activate`)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+3. **Install Requirements:**
+   - Install the necessary packages from `requirements.txt`:
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+   `pip install -r requirements.txt`
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+4. **Create a New Heroku App:**
+   - Log in to Heroku from the terminal:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+   `heroku login`
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+   - Create a new Heroku app:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+   `heroku create <your-app-name>`
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+5. **Prepare for Deployment:**
+   - Ensure you have a `Procfile` that tells Heroku how to run your app.
+   - Make sure your `runtime.txt` specifies the correct Python version.
 
-------
+6. **Add Heroku Remote:**
+   - Add Heroku as a remote to your project:
 
-## FAQ about the uptime script
+   `heroku git:remote -a <your-app-name>`
 
-**Why have you added this script?**
+7. **Set Up Environment Variables:**
+   - Use the following command to add your environment variables (like `SECRET_KEY`, `DEBUG`, and database settings):
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+   `heroku config:set SECRET_KEY=<your-secret-key> DEBUG=False ALLOWED_HOSTS=<your-app-name>.herokuapp.com`
 
-**How will this affect me?**
+8. **Push the Code to Heroku:**
+   - Commit any changes if necessary and deploy to Heroku:
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+   `git add .`
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+   `git commit -m "Initial Heroku deployment"`
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+   `git push heroku main`
 
-**So….?**
+9. **Apply Migrations:**
+   - Once the app is deployed, apply the database migrations:
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+   `heroku run python manage.py migrate`
 
-**Can I opt out?**
+10. **Create a Superuser (Optional for Admin Access):**
+    - Create a superuser to access the Django admin panel:
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+   `heroku run python manage.py createsuperuser`
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+11. **Open the App:**
+    - After deployment, you can open your Heroku app in the browser:
 
-**Anything more?**
+   `heroku open`
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+#### **Forking the GitHub Repository**
+If you wish to create a safe copy of the project to experiment with changes:
 
----
+1. Log in to GitHub and navigate to the GitHub Repository.
+2. Click the "Fork" button near the top of the page to create a copy of the repository.
 
-Happy coding!
+#### **Making a Local Clone**
+1. Under "Clone with HTTPS", click the clipboard icon to copy the link.
+2. Open Git Bash and change the current working directory to the location where you want the cloned directory.
+3. Type `git clone`, add a space, and paste the URL that was copied earlier (in step 1). Press enter to create a clone.
+
+## Testing:
+The site was tested on various devices and browsers to ensure responsiveness and compatibility.
+
+## Credits
+- The like model was inspired by [Django Like Button Tutorial](https://learndjango.com/tutorials/django-like-button-tutorial).
+- The colour palette was generated by [Coolors](https://coolors.co/).
+
+## Acknowledgments
+- **Mentors & Support**: Special thanks to my mentor Spencer Barriball, for invaluable feedback, and to the support team at Code Institute for assistance.
