@@ -63,11 +63,27 @@ Headings and subheadings use a modern sans-serif font that complements the site'
 - **Dj-database-url (0.5.0)**: A utility that simplifies database configurations, particularly useful for deployment on platforms like Heroku.
 
 ## Validator Testing
-![Screenshot of HTML Validator](/assets/media/html_validator.jpg)
+## HTML & CSS Validation
 
-![Screenshot of CSS Validator](/assets/media/css_validator.jpg)
+For validating the HTML and CSS in this project, I used **HTMLHint** to ensure the quality of the code.
 
-![Lighthouse](/assets/media/lighthouse.jpg)
+During the validation process, the only errors detected were related to the usage of **Django template tags** (such as `{% extends %}`, `{% load %}`, and `{{ variable }}`) in the HTML files. These tags are required by Django for dynamic rendering of templates, and as such, they are not recognized by HTMLHint, which expects pure HTML syntax.
+
+The specific errors, such as:
+- **"Doctype must be declared first"**
+- **"Special characters must be escaped"**
+
+are a result of Django template syntax and do not affect the functioning of the project or its compliance with HTML standards.
+
+### Tools Used:
+- **HTMLHint** for validating HTML files.
+- **Stylelint** for validating CSS (if applicable).
+
+All static HTML and CSS passed validation successfully, with only template-related warnings being flagged.
+
+Lighthouse showed low performance due to the ammount of large images used.
+
+![Lighthouse](/assets/media/lighthouse.png)
 
 ## Code Linting
 
