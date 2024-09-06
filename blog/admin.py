@@ -13,5 +13,6 @@ class PostAdmin(SummernoteModelAdmin):
     summernote_fields = ('content',)
     fields = ['title', 'slug', 'author', 'content', 'featured_image', 'status']
 
+
 # Register your models here.
 admin.site.register(Comment)

@@ -4,7 +4,7 @@
 Eco-Nomad is a platform aimed at promoting sustainable travel. The blog shares engaging posts on topics such as alternatives to flying, how to reduce your plastic use when not at home, and other tips that help eco-conscious travellers maintain their green standards on the move.
 
 ## Screenshots
-![Screenshot of Mockup](/assets/media/mockup.jpg)
+![Screenshot of Mockup](/assets/media/mockup.png)
 
 ## User Stories
 - As a user, I can upload videos to my blog posts so that I can share dynamic content.
@@ -18,25 +18,23 @@ The straightforward design and generous use of white space improve the site's re
 ### Colour Scheme
 Eco-Nomad uses a palette that reflects the natural world, featuring green tones evoking a feel of eco-friendliness. The gentle, muted colours help maintain focus on the content without overwhelming the reader.
 
-![Screenshot of Colour Scheme](/assets/media/colour_scheme.jpg)
+![Screenshot of Colour Scheme](/assets/media/colour_scheme.png)
 
 ### Typography
 Headings and subheadings use a modern sans-serif font that complements the site's minimal design, while paragraphs use a serif font for readability.
 
 ## Features
+
+![Screenshot of Comment Section](/assets/media/comment_section.png)
+
 - **Fully Responsive Design**: The blog is designed to be responsive to a variety of devices, such as mobile phones, tablets, laptops, and desktop computers.
 - **Comment Section**: Readers can engage with the content by leaving comments.
 
-![Screenshot of Comment Section](/assets/media/comment_section.jpg)
-
 - **Post Like**: Readers can quickly like posts without having to write a comment, providing feedback to the writer.
 
-![Screenshot of Like Feature](/assets/media/like.jpg)
-
 - **Delete Comment**: Readers can delete their comments after submission.
-- **Update Comment**: Comments can be updated after submission.
 
-![Screenshot of Update and Delete Comment Features](/assets/media/update_and_delete_comment.jpg)
+- **Update Comment**: Comments can be updated after submission.
 
 - **Comment Approval**: Comments are shown once they are approved, giving admins full control.
 
@@ -69,9 +67,27 @@ Headings and subheadings use a modern sans-serif font that complements the site'
 
 ![Screenshot of CSS Validator](/assets/media/css_validator.jpg)
 
-![Screenshot of Python Validator](/assets/media/python_validator.jpg)
-
 ![Lighthouse](/assets/media/lighthouse.jpg)
+
+## Code Linting
+
+During the development of the project, the code was checked for style and syntax issues using **Flake8**. Below are some of the common issues that were flagged and addressed:
+
+### Issues Detected
+
+```bash
+./blog/migrations/0001_initial.py:20:80: E501 line too long (117 > 79 characters)
+./blog/migrations/0001_initial.py:25:80: E501 line too long (101 > 79 characters)
+./blog/migrations/0003_alter_comment_options_alter_post_options_like.py:27:80: E501 line too long (117 > 79 characters)
+./blog/views.py:5:1: F401 '.models.Like' imported but unused
+./blog/views.py:96:5: F841 local variable 'post' is assigned to but never used
+
+### Fixes Applied
+
+- **F401**: Unused imports were removed from the files.
+- **F841**: Removed unused variables.
+- **W293**: Removed unnecessary whitespace in blank lines.
+- **E231**: Added missing whitespace after commas where necessary.
 
 ### Deployment Tools
 - **Heroku**: The platform used to deploy the Eco-Nomad blog.

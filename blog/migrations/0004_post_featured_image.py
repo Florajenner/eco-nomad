@@ -13,6 +13,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='post',
             name='featured_image',
-            field=models.ImageField(default='images/campervan.jpg', upload_to='images/'),
+            field=models.ImageField(
+                default='images/campervan.jpg',
+                upload_to='images/'),
         ),
     ]

@@ -14,12 +14,11 @@ from pathlib import Path
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
-    import env
+    pass
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-
 
 
 # Quick-start development settings - unsuitable for production
@@ -32,9 +31,10 @@ SECRET_KEY = 'django-insecure-f3zbzox2f!2opo86h$)m$5kmzcwaib0$71@!bwh9n$4(&$9=e2
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['8000-florajenner-economad-61z59698c1a.ws-eu115.gitpod.io',
-'8000-florajenner-economad-5e0sn92hg65.ws.codeinstitute-ide.net',
-'.herokuapp.com']
+ALLOWED_HOSTS = [
+    '8000-florajenner-economad-61z59698c1a.ws-eu115.gitpod.io',
+    '8000-florajenner-economad-5e0sn92hg65.ws.codeinstitute-ide.net',
+    '.herokuapp.com']
 
 
 # Application definition
@@ -108,7 +108,7 @@ WSGI_APPLICATION = 'eco_nomad.wsgi.application'
 #        'ENGINE': 'django.db.backends.sqlite3',
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
-#}
+# }
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
