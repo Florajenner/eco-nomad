@@ -40,7 +40,7 @@ Headings and subheadings use a modern sans-serif font that complements the site'
 
 ## Future Features
 - **User Engagement**: We aim to introduce social media integration, allowing readers to engage with content and share it easily with others.
-- **Content Organization**: Posts categorized to help users easily explore different topics related to sustainability and eco-friendly living.
+- **Content Organisation**: Posts categorised to help users easily explore different topics related to sustainability and eco-friendly living.
 - **Search Functionality**: Users can quickly search for specific posts or keywords, enhancing accessibility.
 
 ## Technologies Used
@@ -67,7 +67,7 @@ Headings and subheadings use a modern sans-serif font that complements the site'
 
 For validating the HTML and CSS in this project, I used **HTMLHint** to ensure the quality of the code.
 
-During the validation process, the only errors detected were related to the usage of **Django template tags** (such as `{% extends %}`, `{% load %}`, and `{{ variable }}`) in the HTML files. These tags are required by Django for dynamic rendering of templates, and as such, they are not recognized by HTMLHint, which expects pure HTML syntax.
+During the validation process, the only errors detected were related to the usage of **Django template tags** (such as: `{% extends %}`, `{% load %}`, and `{{ variable }}`) in the HTML files. These tags are required by Django for dynamic rendering of templates, and as such, they are not recognised by HTMLHint, which expects pure HTML syntax.
 
 The specific errors, such as:
 - **"Doctype must be declared first"**
@@ -205,7 +205,7 @@ If you wish to create a safe copy of the project to experiment with changes:
 
 ### Device Testing
 
-The site was tested on various devices, including smartphones, tablets, and desktops, to ensure optimal performance and responsiveness.
+The site was tested on various devices, including smartphones, tablets, and laptops, to ensure optimal performance and responsiveness.
 
 | Device Name               | Screen Size (px)   | Pass Status |
 |---------------------------|--------------------|-------------|
