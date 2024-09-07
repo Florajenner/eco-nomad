@@ -197,11 +197,61 @@ If you wish to create a safe copy of the project to experiment with changes:
 3. Type `git clone`, add a space, and paste the URL that was copied earlier (in step 1). Press enter to create a clone.
 
 ## Testing:
-The site was tested on various devices and browsers to ensure responsiveness and compatibility.
+## Testing:
+
+### Device Testing
+
+The site was tested on various devices, including smartphones, tablets, and desktops, to ensure optimal performance and responsiveness.
+
+| Device Name               | Screen Size (px)   | Pass Status |
+|---------------------------|--------------------|-------------|
+| iPhone 14 Pro              | 2556 x 1179 px     | Pass        |
+| Samsung Galaxy S22         | 2340 x 1080 px     | Pass        |
+| Google Pixel 7             | 2400 x 1080 px     | Pass        |
+| iPad Pro (12.9-inch)       | 2732 x 2048 px     | Pass        |
+| Samsung Galaxy Tab S8      | 2560 x 1600 px     | Pass        |
+| Microsoft Surface Pro 9    | 2880 x 1920 px     | Pass        |
+| MacBook Pro 14"            | 3024 x 1964 px     | Pass        |
+| Dell XPS 13                | 1920 x 1200 px     | Pass        |
+| OnePlus 10 Pro             | 3216 x 1440 px     | Pass        |
+| Huawei MatePad 11          | 2560 x 1600 px     | Pass        |
+
+### Browser Testing
+Eco-Nomad was thoroughly tested on **Chrome**, **Firefox**, **Safari**, and **Edge** to ensure consistent performance across major web browsers.
+
+| Browser  | Pass Status |
+|----------|-------------|
+| Chrome   | Pass        |
+| Firefox  | Pass        |
+| Safari   | Pass        |
+| Edge     | Pass        |
+
+### Manual Testing
+
+| Section Tested        | Input to Validate / Functionality to Test                      | Expected Outcome                                                   | Actual Outcome | Pass/Fail |
+|-----------------------|---------------------------------------------------------------|--------------------------------------------------------------------|----------------|-----------|
+| Main Page             | Clicking on blog post title (e.g., "blog post 1")              | Redirects to the full blog post page with detailed content          | As expected    | Pass      |
+| Main Page             | Clicking on 'Register' link in navigation menu                 | Redirects to the registration page                                 | As expected    | Pass      |
+| Main Page             | Clicking on 'Login' link in navigation menu                    | Redirects to the login page                                        | As expected    | Pass      |
+| Blog Post Page        | Display of post title and author information                   | Post title and author details are displayed as expected             | As expected    | Pass      |
+| Blog Post Page        | Commenting on a blog post                                      | Comments are successfully added, awaiting approval                 | As expected    | Pass      |
+| Blog Post Page        | Clicking 'Like' button                                         | Post like count increases                                          | As expected    | Pass      |
+| Blog Post Page        | Editing or deleting a comment                                  | Comments can be successfully edited or deleted                     | As expected    | Pass      |
+| Blog Post Page        | Error handling for empty comment submission                    | User is prompted to enter text before submitting                   | As expected    | Pass      |
+| Blog Post Page        | Comment approval status                                        | "Awaiting approval" message appears for new comments               | As expected    | Pass      |
+| General Navigation    | Clicking 'Home' link in navigation menu                        | Redirects to the homepage with the list of blog posts               | As expected    | Pass      |
+| Sign Out Page         | Clicking 'Sign Out' button                                     | User is successfully logged out and redirected to the home page     | As expected    | Pass      |
+| Sign In Page          | Entering valid credentials and clicking 'Sign In'              | User is successfully logged in and redirected to the home page      | As expected    | Pass      |
+| Sign In Page          | Entering incorrect credentials                                 | Error message is displayed asking the user to provide correct info  | As expected    | Pass      |
+| Sign Up Page          | Entering valid details and clicking 'Sign Up'                  | User is successfully registered and redirected to the login page    | As expected    | Pass      |
+| Sign Up Page          | Entering passwords that don't match                            | Error message is displayed asking the user to ensure passwords match| As expected    | Pass      |
+| Sign Up Page          | Entering a commonly used or weak password                      | Error message is displayed asking the user to provide a stronger password | As expected    | Pass      |
+
 
 ## Credits
 - The like model was inspired by [Django Like Button Tutorial](https://learndjango.com/tutorials/django-like-button-tutorial).
 - The colour palette was generated by [Coolors](https://coolors.co/).
+- The featured image bug fix was inspired by (https://www.codesnail.com/adding-featured-image-in-blog-posts-django-blog-5/).
 
 ## Acknowledgments
 - **Mentors & Support**: Special thanks to my mentor Spencer Barriball, for invaluable feedback, and to the support team at Code Institute for assistance.

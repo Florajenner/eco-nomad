@@ -110,9 +110,17 @@ WSGI_APPLICATION = 'eco_nomad.wsgi.application'
 #    }
 # }
 
+#ßDATABASES = {
+#    'default': dj_database_url.parse(os.environ.get("postgres://uxewo60vz7t:kz1y9znmT9Bs@ep-gentle-mountain-a23bxz6h-pooler.eu-central-1.aws.neon.tech/tall_hedge_food_546341"))
+#}
+
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+#DATABASES = {
+#    'default': dj_database_url.parse(os.environ.get("DATABASE_URL").encode()) 
+#}
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
