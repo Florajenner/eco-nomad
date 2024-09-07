@@ -92,9 +92,13 @@ During the development of the project, the code was checked for style and syntax
 ### Issues Detected
 
 ./blog/migrations/0001_initial.py:20:80: E501 line too long (117 > 79 characters)
+
 ./blog/migrations/0001_initial.py:25:80: E501 line too long (101 > 79 characters)
+
 ./blog/migrations/0003_alter_comment_options_alter_post_options_like.py:27:80: E501 line too long (117 > 79 characters)
+
 ./blog/views.py:5:1: F401 '.models.Like' imported but unused
+
 ./blog/views.py:96:5: F841 local variable 'post' is assigned to but never used
 
 ### Fixes Applied
