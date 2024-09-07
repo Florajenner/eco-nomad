@@ -13,8 +13,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+
+# If env.py exists, import it
 if os.path.isfile('env.py'):
-    pass
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,13 +30,14 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-f3zbzox2f!2opo86h$)m$5kmzcwaib0$71@!bwh9n$4(&$9=e2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 
 ALLOWED_HOSTS = [
     '8000-florajenner-economad-61z59698c1a.ws-eu115.gitpod.io',
     '8000-florajenner-economad-5e0sn92hg65.ws.codeinstitute-ide.net',
-    '.herokuapp.com']
+    '.herokuapp.com'
+]
 
 
 # Application definition
@@ -103,24 +106,13 @@ WSGI_APPLICATION = 'eco_nomad.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-# }
+# Print the DATABASE_URL to check if it's being loaded correctly
 
-#ßDATABASES = {
-#    'default': dj_database_url.parse(os.environ.get("postgres://uxewo60vz7t:kz1y9znmT9Bs@ep-gentle-mountain-a23bxz6h-pooler.eu-central-1.aws.neon.tech/tall_hedge_food_546341"))
-#}
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-#DATABASES = {
-#    'default': dj_database_url.parse(os.environ.get("DATABASE_URL").encode()) 
-#}
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
